@@ -1,0 +1,96 @@
+$orange: #fbb03b;
+$green: #39b69f;
+$darkGreen: #138073;
+$white: #fff;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: $orange;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+
+    h2 {
+        color: $darkGreen;
+        @media screen and (max-width: 550px) {
+            align-self: flex-end;
+            margin-right: 40px;
+        }
+    }
+
+    .bigInput {
+        width: 500px;
+        padding: 18px 22px;
+        outline: none;
+        font-size: 14px;
+
+        &::placeholder {
+            color: $green;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 80%;
+        }
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        outline: none;
+        @media screen and (max-width: 550px) {
+            margin-left: 25px;
+        }
+    }
+
+    .label {
+        color: $darkGreen;
+
+        .underline {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        outline: none;
+        border: 1px solid #fff;
+        padding: 25px 100px;
+        background-color: $green;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+}
+
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $darkGreen;
+
+    span {
+        width: 40px;
+        height: 5.5px;
+        margin: 3px;
+        background-color: $white;
+    }
+}
